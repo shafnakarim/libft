@@ -6,7 +6,7 @@
 /*   By: srayees <srayees@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 14:09:35 by srayees           #+#    #+#             */
-/*   Updated: 2025/07/21 14:40:06 by srayees          ###   ########.fr       */
+/*   Updated: 2025/07/28 11:09:59 by srayees          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	{
 		j = 0;
 		while (needle[j] && haystack[i + j] && i + j < len && haystack[i
-			+ j] == needle[j])
+				+ j] == needle[j])
 		{
 			j++;
 		}
