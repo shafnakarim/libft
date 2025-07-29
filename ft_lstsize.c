@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srayees <srayees@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 15:11:35 by srayees           #+#    #+#             */
-/*   Updated: 2025/07/29 15:26:42 by srayees          ###   ########.fr       */
+/*   Created: 2025/07/29 13:53:48 by srayees           #+#    #+#             */
+/*   Updated: 2025/07/29 15:25:57 by srayees          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	while (n--)
+	int	count;
+
+	count = 0;
+	while (lst)
 	{
-		if ((*(unsigned char *)s) == (unsigned char)c)
-			return ((void *)s);
-		++s;
+		count++;
+		lst = lst->next;
 	}
-	return (0);
+	return (count);
 }
 
 // # include <stdio.h>
 
-// int main ()
+// int main()
 // {
-// 	const  char str[] = " welcome Abu dhabi";
-// 	int ch = 'a';
-// 	size_t n = 16;
-// 	char *rslt = ft_memchr(str, ch, n);
-// 	if (rslt != NULL)
-// 	{
-// 		printf("character '%c' found. %ld\n", ch, n);
-// 	}
-// 	return (0);
+// 	t_list *head = NULL;
+// 	t_list *node1 = ft_lstnew("test1");
+// 	ft_lstadd_front(&head, node1);
+// 	int size = ft_lstsize(head);
+// 	printf ("size of list : %d\n", size);
+// 	free(node1);
+// 	return(0);
 // }

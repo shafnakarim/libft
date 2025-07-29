@@ -6,7 +6,7 @@
 /*   By: srayees <srayees@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 16:30:41 by srayees           #+#    #+#             */
-/*   Updated: 2025/07/18 16:37:23 by srayees          ###   ########.fr       */
+/*   Updated: 2025/07/29 15:24:54 by srayees          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
+
+// # include <stdio.h>
+// int main()
+// {
+// 	char dest[20] = "42 abu dhabi";
+// 	const char *src = "dubai";
+// 	size_t dstsize = sizeof (dest);	
+// 	size_t result = ft_strlcat(dest, src, dstsize);
+// 	printf ("total length :;; %zu\n", result);
+// 	return (0);
+// }

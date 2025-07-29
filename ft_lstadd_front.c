@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srayees <srayees@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 15:11:35 by srayees           #+#    #+#             */
-/*   Updated: 2025/07/29 15:26:42 by srayees          ###   ########.fr       */
+/*   Created: 2025/07/29 11:57:02 by srayees           #+#    #+#             */
+/*   Updated: 2025/07/29 15:25:25 by srayees          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	while (n--)
+	if (lst && new)
 	{
-		if ((*(unsigned char *)s) == (unsigned char)c)
-			return ((void *)s);
-		++s;
+		new->next = *lst;
+		*lst = new;
 	}
-	return (0);
 }
 
 // # include <stdio.h>
-
-// int main ()
+// int main()
 // {
-// 	const  char str[] = " welcome Abu dhabi";
-// 	int ch = 'a';
-// 	size_t n = 16;
-// 	char *rslt = ft_memchr(str, ch, n);
-// 	if (rslt != NULL)
-// 	{
-// 		printf("character '%c' found. %ld\n", ch, n);
-// 	}
-// 	return (0);
+//     t_list *head = NULL;
+//     t_list *node1 = ft_lstnew("Book");
+//     ft_lstadd_front(&head, node1); 
+//     t_list *current = head;
+//     while(current)
+//     {
+//         printf("%s")
+//     }
 // }

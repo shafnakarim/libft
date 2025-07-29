@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srayees <srayees@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 15:11:35 by srayees           #+#    #+#             */
-/*   Updated: 2025/07/29 15:26:42 by srayees          ###   ########.fr       */
+/*   Created: 2025/07/29 14:11:26 by srayees           #+#    #+#             */
+/*   Updated: 2025/07/29 14:52:10 by srayees          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	while (n--)
+	t_list	*last;
+
+	if (!lst || !new)
+		return ;
+	if (!*lst)
 	{
-		if ((*(unsigned char *)s) == (unsigned char)c)
-			return ((void *)s);
-		++s;
+		*lst = new;
+		return ;
 	}
-	return (0);
+	last = *lst;
+	while (last->next)
+		last = last->next;
+	last->next = new;
 }
-
-// # include <stdio.h>
-
-// int main ()
-// {
-// 	const  char str[] = " welcome Abu dhabi";
-// 	int ch = 'a';
-// 	size_t n = 16;
-// 	char *rslt = ft_memchr(str, ch, n);
-// 	if (rslt != NULL)
-// 	{
-// 		printf("character '%c' found. %ld\n", ch, n);
-// 	}
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: srayees <srayees@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 11:43:46 by srayees           #+#    #+#             */
-/*   Updated: 2025/07/21 14:35:44 by srayees          ###   ########.fr       */
+/*   Updated: 2025/07/29 15:24:27 by srayees          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 //     char *sub1 = ft_substr(s1, 5, 6);
 //     char *sub2 = ft_substr(s1, 2, 8);
 //     char *sub3 = ft_substr(s1, 50, 2);
-
 //     printf ("sub1: %s\n", sub1);
 //     printf ("sub2 : %s\n", sub2);
 //     printf ("sub3 : %s\n", sub3);
-
 //     free(sub1);
 //     free(sub2);
 //     free(sub3);

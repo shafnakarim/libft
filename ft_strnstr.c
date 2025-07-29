@@ -6,7 +6,7 @@
 /*   By: srayees <srayees@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 14:09:35 by srayees           #+#    #+#             */
-/*   Updated: 2025/07/28 11:09:59 by srayees          ###   ########.fr       */
+/*   Updated: 2025/07/29 15:23:01 by srayees          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,16 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char	hay[] = "shafna rayees karim";
+// 	char 	needle[] = "rayees";
+// 	char *result = ft_strnstr (hay, needle, 13);
+// 	if (result)
+// 		printf ("found : %s\n,", result);
+// 	else 
+// 		printf ("not found.\n");
+// 	return(0);
+// }

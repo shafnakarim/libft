@@ -6,7 +6,7 @@
 /*   By: srayees <srayees@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 14:15:50 by srayees           #+#    #+#             */
-/*   Updated: 2025/07/23 14:45:00 by srayees          ###   ########.fr       */
+/*   Updated: 2025/07/28 15:13:23 by srayees          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,9 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+
+// int main()
+// {
+// 	ft_putchar_fd ('A', 1);
+// 	return(0);
+// }

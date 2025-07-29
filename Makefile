@@ -17,6 +17,13 @@ SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 
 OBJS = $(SRCS:.c=.o)
 
+#Bonus sources
+BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+             ft_lstadd_back.c \
+			#  ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+            #  ft_lstmap.c
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+
 # Rule :All - to complete the project
 all: $(NAME)
 
@@ -24,9 +31,12 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
 # Rule : clean - Remove object files
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 # Rule : fclean - To remove object and excecutable files 
 fclean: clean
@@ -35,4 +45,4 @@ fclean: clean
 # Rule : re - Rebuild everything from scratch
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus   
